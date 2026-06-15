@@ -46,6 +46,32 @@ ID  | TARGET CLASSIFICATION | MISSION STATUS
 
 <br />
 
+### `[CORE_ARCHITECTURE]`
+
+```text
+                      [USER_INPUT: CHALLENGE]
+                                │
+                                ▼
+  ┌───────────────────────────────────────────────────────────┐
+  │                 NEURAL_PROCESSING_UNIT                    │
+  │                                                           │
+  │  [IDEATION] ──▶ [PROTOTYPING] ──▶ [OPTIMIZATION_LOOP]     │
+  └───────────────────────────────────────────────────────────┘
+                                │
+          ┌─────────────────────┴─────────────────────┐
+          ▼                                           ▼
+[HARDWARE_INTERFACE]                         [SOFTWARE_INTERFACE]
+  - ESP32 / Arduino                            - Next.js / React
+  - Combat Robotics                            - TypeScript / Node
+  - Motor Controllers                          - ML / Python
+          │                                           │
+          └─────────────────────┬─────────────────────┘
+                                ▼
+                       [OUTPUT: DOMINANCE]
+```
+
+<br />
+
 ### `[SYSTEM_METRICS]`
 
 <div align="center">
