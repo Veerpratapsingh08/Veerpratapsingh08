@@ -1,223 +1,145 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="100%" height="100%">
   <defs>
-    <!-- Background Grid -->
-    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#111" stroke-width="1"/>
+    <!-- Background Dot Grid -->
+    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#27272a" />
     </pattern>
 
-    <!-- CRT Scanline -->
-    <linearGradient id="scanline" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="rgba(255,255,255,0)" />
-      <stop offset="50%" stop-color="rgba(0, 255, 65, 0.2)" />
-      <stop offset="100%" stop-color="rgba(255,255,255,0)" />
-    </linearGradient>
-
-    <!-- Violent Glitch Filter -->
-    <filter id="glitch">
-      <feTurbulence type="fractalNoise" baseFrequency="0.1 0.9" numOctaves="2" result="noise">
-        <animate attributeName="baseFrequency" values="0.1 0.9;0.9 0.1;0.1 0.9" dur="0.2s" repeatCount="indefinite" />
-      </feTurbulence>
-      <feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 3 -1" in="noise" result="coloredNoise" />
-      <feDisplacementMap in="SourceGraphic" in2="coloredNoise" scale="8" xChannelSelector="R" yChannelSelector="G" />
-    </filter>
-
-    <!-- Soft Glow Filter -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;display=swap');
       
-      text { font-family: 'Share Tech Mono', monospace; }
+      text { font-family: 'JetBrains Mono', monospace; }
       
-      /* Radar rotation */
-      .radar-sweep {
-        transform-origin: 150px 175px;
-        animation: sweep 3s linear infinite;
+      /* Smooth Rotation */
+      .rotate {
+        transform-origin: 120px 150px;
+        animation: spin 10s linear infinite;
       }
-      @keyframes sweep {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+      .rotate-reverse {
+        transform-origin: 120px 150px;
+        animation: spin 15s linear infinite reverse;
+      }
+      @keyframes spin { 100% { transform: rotate(360deg); } }
+
+      /* Subdued Pulse */
+      .pulse {
+        animation: pulsing 3s ease-in-out infinite alternate;
+      }
+      @keyframes pulsing {
+        0% { opacity: 0.3; }
+        100% { opacity: 0.8; }
       }
 
-      /* Blinking Warning */
-      .blink { animation: blinker 0.8s steps(2, start) infinite; }
-      @keyframes blinker {
-        0% { opacity: 1; text-shadow: 0 0 10px #ff003c; }
-        50% { opacity: 0; }
-        100% { opacity: 1; text-shadow: 0 0 10px #ff003c; }
-      }
-
-      /* Typing Animation Sequence */
-      .type-line { opacity: 0; animation: reveal 0.1s forwards; }
+      /* Clean Typing Animation */
+      .log-line { opacity: 0; animation: fade-in 0.1s forwards; }
       .l1 { animation-delay: 0.5s; }
-      .l2 { animation-delay: 1.2s; }
+      .l2 { animation-delay: 1.0s; }
       .l3 { animation-delay: 1.5s; }
-      .l4 { animation-delay: 2.2s; }
+      .l4 { animation-delay: 2.0s; }
       .l5 { animation-delay: 2.5s; }
-      .l6 { animation-delay: 3.2s; }
-      .l7 { animation-delay: 3.4s; }
+      .l6 { animation-delay: 3.0s; }
       
-      @keyframes reveal { to { opacity: 1; } }
+      @keyframes fade-in { to { opacity: 1; } }
 
-      /* Cursor Blink */
-      .cursor {
-        opacity: 0;
-        animation: cursor-blink 0.8s step-end infinite;
-        animation-delay: 3.5s;
+      /* Sparkline Animation */
+      .sparkline {
+        stroke-dasharray: 400;
+        stroke-dashoffset: 400;
+        animation: draw 2s ease-out forwards;
+        animation-delay: 1s;
       }
-      @keyframes cursor-blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-
-      /* Vertical Scroll Animation (Hex Dump) */
-      .hex-scroll {
-        animation: scroll-up 10s linear infinite;
-      }
-      @keyframes scroll-up {
-        0% { transform: translateY(0); }
-        100% { transform: translateY(-150px); }
-      }
-
-      /* Waveform Animation */
-      .wave {
-        animation: wave-pulse 1s ease-in-out infinite alternate;
+      @keyframes draw { to { stroke-dashoffset: 0; } }
+      
+      /* Bar chart animation */
+      .bar {
         transform-origin: bottom;
+        animation: grow 1s ease-out forwards;
       }
-      .w1 { animation-delay: 0.1s; }
-      .w2 { animation-delay: 0.3s; }
-      .w3 { animation-delay: 0.5s; }
-      .w4 { animation-delay: 0.2s; }
-      .w5 { animation-delay: 0.4s; }
-      .w6 { animation-delay: 0.1s; }
+      .b1 { animation-delay: 0.2s; }
+      .b2 { animation-delay: 0.4s; }
+      .b3 { animation-delay: 0.6s; }
+      .b4 { animation-delay: 0.8s; }
+      .b5 { animation-delay: 1.0s; }
+      .b6 { animation-delay: 1.2s; }
       
-      @keyframes wave-pulse {
-        0% { transform: scaleY(0.2); }
+      @keyframes grow {
+        0% { transform: scaleY(0); }
         100% { transform: scaleY(1); }
       }
     </style>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="350" fill="#030303" />
-  <rect width="900" height="350" fill="url(#grid)" />
+  <rect width="900" height="300" fill="#09090b" />
+  <rect width="900" height="300" fill="url(#dotGrid)" />
 
-  <!-- Frame Border -->
-  <path d="M 15 15 L 200 15 L 210 35 L 885 35 L 885 335 L 15 335 Z" fill="none" stroke="#222" stroke-width="2" />
-  <path d="M 15 15 L 60 15" stroke="#ff003c" stroke-width="5" filter="url(#glow)" />
-  <path d="M 885 335 L 840 335" stroke="#ff003c" stroke-width="5" filter="url(#glow)" />
+  <!-- Top Bar -->
+  <rect x="0" y="0" width="900" height="30" fill="#18181b" border-bottom="1px solid #27272a" />
+  <text x="20" y="20" fill="#a1a1aa" font-size="12" font-weight="bold">SYSTEM_TELEMETRY_UPLINK // NODE: VPS-CORE</text>
+  <text x="750" y="20" fill="#a1a1aa" font-size="12">STATUS: NOMINAL</text>
+  <circle cx="870" cy="15" r="4" fill="#10b981" class="pulse" />
 
-  <!-- RADAR UI (Left) -->
-  <g transform="translate(30, 0)">
-    <!-- Outer Rings -->
-    <circle cx="150" cy="175" r="110" fill="none" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="2 6" />
-    <circle cx="150" cy="175" r="90" fill="none" stroke="#333" stroke-width="2" />
-    <circle cx="150" cy="175" r="60" fill="none" stroke="#1a1a1a" stroke-width="1" />
-    
-    <!-- Central Node -->
-    <circle cx="150" cy="175" r="5" fill="#ff003c" class="blink" filter="url(#glow)" />
-    
-    <!-- Crosshairs -->
-    <path d="M 150 45 L 150 305 M 20 175 L 280 175" fill="none" stroke="#222" stroke-width="1" />
-    
-    <!-- Radar Sweep -->
-    <path d="M 150 175 L 150 65 A 110 110 0 0 1 249 127 Z" fill="rgba(255, 0, 60, 0.15)" class="radar-sweep" />
-    <line x1="150" y1="175" x2="150" y2="65" stroke="#ff003c" stroke-width="2" class="radar-sweep" filter="url(#glow)" />
+  <!-- UI Frame Borders -->
+  <rect x="20" y="50" width="260" height="230" fill="none" stroke="#27272a" stroke-width="1" rx="4" />
+  <rect x="300" y="50" width="380" height="230" fill="none" stroke="#27272a" stroke-width="1" rx="4" />
+  <rect x="700" y="50" width="180" height="230" fill="none" stroke="#27272a" stroke-width="1" rx="4" />
 
-    <!-- Targeting brackets -->
-    <path d="M 50 85 L 50 65 L 70 65" fill="none" stroke="#ff003c" stroke-width="2" />
-    <path d="M 250 85 L 250 65 L 230 65" fill="none" stroke="#ff003c" stroke-width="2" />
-    <path d="M 50 265 L 50 285 L 70 285" fill="none" stroke="#ff003c" stroke-width="2" />
-    <path d="M 250 265 L 250 285 L 230 285" fill="none" stroke="#ff003c" stroke-width="2" />
-
-    <!-- Data points -->
-    <circle cx="190" cy="130" r="3" fill="#fff" class="blink" />
-    <circle cx="100" cy="210" r="2" fill="#fff" />
-    <circle cx="220" cy="200" r="2" fill="#fff" />
+  <!-- MODULE 1: Geometric Visualizer (Left) -->
+  <g transform="translate(30, 50)">
+    <text x="10" y="25" fill="#71717a" font-size="10">MODULE_01: SPATIAL_AWARENESS</text>
+    <line x1="10" y1="35" x2="250" y2="35" stroke="#27272a" stroke-width="1" />
     
-    <!-- Lock Indicator -->
-    <rect x="110" y="300" width="80" height="15" fill="#ff003c" class="blink" />
-    <text x="115" y="311" fill="#000" font-size="10" font-weight="bold">TRGT_LOCKED</text>
-  </g>
-
-  <!-- TERMINAL OUTPUT (Center) -->
-  <g transform="translate(360, 60)">
-    <text x="0" y="0" fill="#ff003c" font-size="18" font-weight="bold" class="blink" filter="url(#glitch)">[!] CRITICAL: UNAUTHORIZED ACCESS DETECTED</text>
-    
-    <text x="0" y="35" fill="#00ff41" font-size="14" class="type-line l1">root@vps-core:~# ./init_lethal_protocol.sh</text>
-    <text x="0" y="60" fill="#666" font-size="14" class="type-line l2">>> LOADING KERNEL MODULES... [OK]</text>
-    <text x="0" y="80" fill="#666" font-size="14" class="type-line l3">>> BYPASSING FIREWALL... [SUCCESS]</text>
-    
-    <text x="0" y="115" fill="#00ff41" font-size="14" class="type-line l4">root@vps-core:~# whoami</text>
-    <text x="0" y="145" fill="#fff" font-size="18" font-weight="bold" class="type-line l5">VEER PRATAP SINGH <tspan fill="#ff003c">// OMEGA CLEARANCE</tspan></text>
-    
-    <text x="0" y="180" fill="#00ff41" font-size="14" class="type-line l6">root@vps-core:~# cat current_directives.log</text>
-    <text x="0" y="205" fill="#aaa" font-size="14" class="type-line l7">1. BUILD COMBAT ROBOTICS PLATFORM</text>
-    <text x="0" y="225" fill="#aaa" font-size="14" class="type-line l7">2. DEPLOY AUTONOMOUS ESP DRONE</text>
-    <text x="0" y="245" fill="#aaa" font-size="14" class="type-line l7">3. DOMINATE SYSTEM ARCHITECTURE</text>
-    
-    <text x="0" y="280" fill="#00ff41" font-size="14" class="type-line l7">root@vps-core:~# <tspan fill="#fff" class="cursor">█</tspan></text>
-  </g>
-
-  <!-- HEX DUMP SIDEBAR (Right) -->
-  <g transform="translate(750, 60)">
-    <!-- Clipping Path for Scroll -->
-    <clipPath id="scrollClip">
-      <rect x="0" y="0" width="130" height="260" />
-    </clipPath>
-    <rect x="0" y="0" width="120" height="260" fill="#0a0a0a" stroke="#222" stroke-width="1" />
-    <text x="5" y="15" fill="#ff003c" font-size="10" font-weight="bold">MEM_DUMP</text>
-    <line x1="0" y1="20" x2="120" y2="20" stroke="#222" stroke-width="1" />
-    
-    <g clip-path="url(#scrollClip)">
-      <g class="hex-scroll">
-        <text x="5" y="40" fill="#444" font-size="9" font-family="monospace">
-          <tspan x="5" dy="0">0x00: FF 00 1A 2B</tspan>
-          <tspan x="5" dy="12">0x04: 3C 4D 5E 6F</tspan>
-          <tspan x="5" dy="12">0x08: 7A 8B 9C AD</tspan>
-          <tspan x="5" dy="12">0x0C: BE CF D0 E1</tspan>
-          <tspan x="5" dy="12">0x10: F2 03 14 25</tspan>
-          <tspan x="5" dy="12">0x14: 36 47 58 69</tspan>
-          <tspan x="5" dy="12">0x18: 7A 8B 9C AD</tspan>
-          <tspan x="5" dy="12">0x1C: BE CF D0 E1</tspan>
-          <tspan x="5" dy="12">0x20: F2 03 14 25</tspan>
-          <tspan x="5" dy="12">0x24: 36 47 58 69</tspan>
-          <!-- Repeated for infinite scroll illusion -->
-          <tspan x="5" dy="12">0x28: FF 00 1A 2B</tspan>
-          <tspan x="5" dy="12">0x2C: 3C 4D 5E 6F</tspan>
-          <tspan x="5" dy="12">0x30: 7A 8B 9C AD</tspan>
-          <tspan x="5" dy="12">0x34: BE CF D0 E1</tspan>
-          <tspan x="5" dy="12">0x38: F2 03 14 25</tspan>
-          <tspan x="5" dy="12">0x3C: 36 47 58 69</tspan>
-          <tspan x="5" dy="12">0x40: 7A 8B 9C AD</tspan>
-          <tspan x="5" dy="12">0x44: BE CF D0 E1</tspan>
-        </text>
-      </g>
+    <!-- Rotating wireframes -->
+    <g transform="translate(30, 20)">
+      <circle cx="90" cy="100" r="60" fill="none" stroke="#3f3f46" stroke-width="1" stroke-dasharray="4 4" class="rotate" />
+      <circle cx="90" cy="100" r="40" fill="none" stroke="#52525b" stroke-width="1" class="rotate-reverse" />
+      <polygon points="90,50 133,125 47,125" fill="none" stroke="#38bdf8" stroke-width="1" class="rotate" />
+      <polygon points="90,150 47,75 133,75" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.5" class="rotate-reverse" />
+      <circle cx="90" cy="100" r="3" fill="#38bdf8" />
     </g>
+    
+    <!-- Data readouts -->
+    <text x="10" y="200" fill="#a1a1aa" font-size="10">PITCH: +12.4°</text>
+    <text x="10" y="215" fill="#a1a1aa" font-size="10">YAW:   -04.1°</text>
+    <text x="150" y="200" fill="#a1a1aa" font-size="10">MEM: 32GB</text>
+    <text x="150" y="215" fill="#a1a1aa" font-size="10">CPU: 4.2GHz</text>
+  </g>
 
-    <!-- Audio Waveform (Bottom Right) -->
-    <g transform="translate(0, 230)">
-      <rect x="10" y="0" width="10" height="20" fill="#00ff41" class="wave w1" />
-      <rect x="25" y="0" width="10" height="20" fill="#00ff41" class="wave w2" />
-      <rect x="40" y="0" width="10" height="20" fill="#00ff41" class="wave w3" />
-      <rect x="55" y="0" width="10" height="20" fill="#00ff41" class="wave w4" />
-      <rect x="70" y="0" width="10" height="20" fill="#00ff41" class="wave w5" />
-      <rect x="85" y="0" width="10" height="20" fill="#00ff41" class="wave w6" />
-      <rect x="100" y="0" width="10" height="20" fill="#00ff41" class="wave w1" />
+  <!-- MODULE 2: System Logs (Center) -->
+  <g transform="translate(300, 50)">
+    <text x="15" y="25" fill="#71717a" font-size="10">MODULE_02: SYSTEM_EVENTS</text>
+    <line x1="15" y1="35" x2="365" y2="35" stroke="#27272a" stroke-width="1" />
+    
+    <!-- Logs -->
+    <g transform="translate(15, 65)">
+      <text y="0" fill="#a1a1aa" font-size="12" class="log-line l1">[08:00:01] <tspan fill="#38bdf8">INFO</tspan> Boot sequence initiated.</text>
+      <text y="25" fill="#a1a1aa" font-size="12" class="log-line l2">[08:00:03] <tspan fill="#38bdf8">INFO</tspan> Fetching architectural plans...</text>
+      <text y="50" fill="#a1a1aa" font-size="12" class="log-line l3">[08:00:04] <tspan fill="#10b981">SUCC</tspan> Next.js Portfolio deployed to Vercel.</text>
+      <text y="75" fill="#a1a1aa" font-size="12" class="log-line l4">[08:00:07] <tspan fill="#38bdf8">INFO</tspan> Calibrating ESP32 Motor Drivers...</text>
+      <text y="100" fill="#a1a1aa" font-size="12" class="log-line l5">[08:00:09] <tspan fill="#10b981">SUCC</tspan> Hardware loop running at 1000Hz.</text>
+      <text y="125" fill="#a1a1aa" font-size="12" class="log-line l6">[08:00:12] <tspan fill="#38bdf8">WAIT</tspan> Awaiting new build input...</text>
     </g>
   </g>
 
-  <!-- Top Right Header -->
-  <rect x="680" y="15" width="205" height="20" fill="#ff003c" />
-  <text x="690" y="29" fill="#000" font-size="12" font-weight="bold">PROTOCOL OMEGA // V.2.0.4</text>
-
-  <!-- CRT Overlay -->
-  <rect width="900" height="350" fill="url(#scanline)" style="mix-blend-mode: overlay; pointer-events: none;" />
+  <!-- MODULE 3: Analytics (Right) -->
+  <g transform="translate(700, 50)">
+    <text x="15" y="25" fill="#71717a" font-size="10">MODULE_03: PERFORMANCE</text>
+    <line x1="15" y1="35" x2="165" y2="35" stroke="#27272a" stroke-width="1" />
+    
+    <!-- Animated Sparkline -->
+    <text x="15" y="60" fill="#a1a1aa" font-size="10">THROUGHPUT</text>
+    <path d="M 15 100 L 40 100 L 55 70 L 70 110 L 85 85 L 100 95 L 120 60 L 160 60" fill="none" stroke="#38bdf8" stroke-width="2" class="sparkline" />
+    
+    <!-- Animated Bar Chart -->
+    <text x="15" y="140" fill="#a1a1aa" font-size="10">COMMIT_FREQ (7D)</text>
+    <g transform="translate(15, 200) scale(1, -1)">
+      <rect x="0" y="0" width="15" height="20" fill="#52525b" class="bar b1" />
+      <rect x="22" y="0" width="15" height="40" fill="#52525b" class="bar b2" />
+      <rect x="44" y="0" width="15" height="30" fill="#38bdf8" class="bar b3" />
+      <rect x="66" y="0" width="15" height="50" fill="#52525b" class="bar b4" />
+      <rect x="88" y="0" width="15" height="25" fill="#52525b" class="bar b5" />
+      <rect x="110" y="0" width="15" height="45" fill="#38bdf8" class="bar b6" />
+    </g>
+  </g>
 
 </svg>
