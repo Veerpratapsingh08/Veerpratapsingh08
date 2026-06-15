@@ -74,6 +74,35 @@ ID  | CLASSIFICATION         | STATUS        | PRIMARY TECHNOLOGIES
 
 ---
 
+### `[ FEATURED_MODULES ]`
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <a href="https://github.com/Veerpratapsingh08/porfolio">
+          <img src="assets/portfolio.png" width="100%" alt="Full Stack Portfolio" />
+        </a>
+        <br/><br/>
+        <b><a href="https://github.com/Veerpratapsingh08/porfolio">SYS // PORTFOLIO</a></b>
+        <p>Next.js / TypeScript / Tailwind</p>
+      </td>
+      <td align="center" width="50%">
+        <a href="#">
+          <img src="assets/robotics.png" width="100%" alt="Combat Robotics" />
+        </a>
+        <br/><br/>
+        <b><a href="#">SYS // ROBOTICS</a></b>
+        <p>ESP32 / Embedded C / Kinematics</p>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<br />
+
+---
+
 ### `[ TELEMETRY_METRICS ]`
 
 <div align="center">
