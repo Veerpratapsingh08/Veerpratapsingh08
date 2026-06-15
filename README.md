@@ -80,19 +80,17 @@ ID  | CLASSIFICATION         | STATUS        | PRIMARY TECHNOLOGIES
   <table>
     <tr>
       <td align="center" width="50%">
-        <a href="https://github.com/Veerpratapsingh08/porfolio">
+        <a href="https://veerpratapsingh.vercel.app">
           <img src="assets/portfolio.png" width="100%" alt="Full Stack Portfolio" />
         </a>
         <br/><br/>
-        <b><a href="https://github.com/Veerpratapsingh08/porfolio">SYS // PORTFOLIO</a></b>
+        <b><a href="https://veerpratapsingh.vercel.app">SYS // PORTFOLIO</a></b>
         <p>Next.js / TypeScript / Tailwind</p>
       </td>
       <td align="center" width="50%">
-        <a href="#">
-          <img src="assets/robotics.png" width="100%" alt="Combat Robotics" />
-        </a>
+        <img src="assets/robotics.png" width="100%" alt="Combat Robotics" />
         <br/><br/>
-        <b><a href="#">SYS // ROBOTICS</a></b>
+        <b>SYS // ROBOTICS</b>
         <p>ESP32 / Embedded C / Kinematics</p>
       </td>
     </tr>
