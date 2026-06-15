@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="100%">
+  <defs>
+    <!-- Background Grid -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1" fill="#333" />
+    </pattern>
+
+    <!-- Glitch Filter -->
+    <filter id="glitch">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05 0.95" numOctaves="1" result="noise" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 3 -1" in="noise" result="coloredNoise" />
+      <feDisplacementMap in="SourceGraphic" in2="coloredNoise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
+      
+      text {
+        font-family: 'Share Tech Mono', monospace;
+      }
+      
+      /* Radar rotation */
+      .radar-sweep {
+        transform-origin: 150px 150px;
+        animation: sweep 4s linear infinite;
+      }
+      @keyframes sweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* Blinking Warning */
+      .blink {
+        animation: blinker 1.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;
+      }
+      @keyframes blinker {
+        0% { opacity: 1; text-shadow: 0 0 10px #ff003c; }
+        100% { opacity: 0.2; }
+      }
+
+      /* Typing Animation Sequence */
+      .type-line {
+        opacity: 0;
+        animation: reveal 0.1s forwards;
+      }
+      .l1 { animation-delay: 0.5s; }
+      .l2 { animation-delay: 1.2s; }
+      .l3 { animation-delay: 1.5s; }
+      .l4 { animation-delay: 2.2s; }
+      .l5 { animation-delay: 2.5s; }
+      .l6 { animation-delay: 3.2s; }
+      .l7 { animation-delay: 3.4s; }
+      
+      @keyframes reveal {
+        to { opacity: 1; }
+      }
+
+      /* CRT Scanline effect */
+      .scanline {
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.1) 50%, rgba(255,255,255,0));
+        opacity: 0.1;
+        animation: scan 8s linear infinite;
+      }
+      @keyframes scan {
+        0% { transform: translateY(-100px); }
+        100% { transform: translateY(400px); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="#050505" />
+  <rect width="800" height="300" fill="url(#grid)" />
+
+  <!-- Frame Border -->
+  <path d="M 10 10 L 150 10 L 160 25 L 790 25 L 790 290 L 10 290 Z" fill="none" stroke="#333" stroke-width="2" />
+  <path d="M 10 10 L 40 10" stroke="#ff003c" stroke-width="4" />
+  <path d="M 790 290 L 760 290" stroke="#ff003c" stroke-width="4" />
+
+  <!-- RADAR UI (Left) -->
+  <g transform="translate(20, 0)">
+    <!-- Outer Rings -->
+    <circle cx="150" cy="150" r="100" fill="none" stroke="#222" stroke-width="1" stroke-dasharray="4 4" />
+    <circle cx="150" cy="150" r="80" fill="none" stroke="#333" stroke-width="2" />
+    <circle cx="150" cy="150" r="60" fill="none" stroke="#222" stroke-width="1" />
+    <circle cx="150" cy="150" r="4" fill="#ff003c" class="blink" />
+    
+    <!-- Crosshairs -->
+    <path d="M 150 30 L 150 270 M 30 150 L 270 150" fill="none" stroke="#333" stroke-width="1" />
+    
+    <!-- Radar Sweep -->
+    <path d="M 150 150 L 150 50 A 100 100 0 0 1 236 100 Z" fill="rgba(255, 0, 60, 0.1)" class="radar-sweep" />
+    <line x1="150" y1="150" x2="150" y2="50" stroke="#ff003c" stroke-width="2" class="radar-sweep" />
+
+    <!-- Targeting brackets -->
+    <path d="M 50 70 L 50 50 L 70 50" fill="none" stroke="#ff003c" stroke-width="2" />
+    <path d="M 250 70 L 250 50 L 230 50" fill="none" stroke="#ff003c" stroke-width="2" />
+    <path d="M 50 230 L 50 250 L 70 250" fill="none" stroke="#ff003c" stroke-width="2" />
+    <path d="M 250 230 L 250 250 L 230 250" fill="none" stroke="#ff003c" stroke-width="2" />
+
+    <!-- Random data points -->
+    <circle cx="180" cy="120" r="3" fill="#fff" class="blink" />
+    <circle cx="110" cy="190" r="2" fill="#fff" />
+    <circle cx="210" cy="170" r="2" fill="#fff" />
+    
+    <text x="115" y="275" fill="#555" font-size="10">TRGT_LOCK_ACQUIRED</text>
+  </g>
+
+  <!-- TERMINAL OUTPUT (Right) -->
+  <g transform="translate(340, 50)">
+    <text x="0" y="0" fill="#ff003c" font-size="16" font-weight="bold" class="blink">WARNING: SYSTEM OVERRIDE DETECTED</text>
+    
+    <text x="0" y="30" fill="#00ff41" font-size="14" class="type-line l1">> INITIALIZING BOOT SEQUENCE...</text>
+    <text x="0" y="55" fill="#aaa" font-size="14" class="type-line l2">> LOADING KERNEL MODULES... [OK]</text>
+    <text x="0" y="80" fill="#aaa" font-size="14" class="type-line l3">> CALIBRATING WEAPONS SYSTEMS... [OK]</text>
+    
+    <text x="0" y="115" fill="#00ff41" font-size="14" class="type-line l4">> AUTHENTICATING USER...</text>
+    <text x="0" y="140" fill="#fff" font-size="16" font-weight="bold" class="type-line l5">USER: VEER PRATAP SINGH // ARMED</text>
+    
+    <text x="0" y="175" fill="#ff003c" font-size="14" class="type-line l6">ROLE: SYSTEMS ENGINEER | AI | HARDWARE</text>
+    <text x="0" y="200" fill="#aaa" font-size="14" class="type-line l7">DIRECTIVE: BUILD. CONQUER. DESTROY WEAK CODE.</text>
+    
+    <!-- Hex dump decoration -->
+    <text x="0" y="240" fill="#333" font-size="10" font-family="monospace">
+      0x0000: 48 65 6C 6C 6F  0x0008: 57 6F 72 6C 64
+      0x0010: 42 75 69 6C 64  0x0018: 44 69 66 66 65
+    </text>
+  </g>
+
+  <!-- Top Right Header -->
+  <rect x="580" y="10" width="200" height="20" fill="#ff003c" />
+  <text x="590" y="24" fill="#000" font-size="12" font-weight="bold">PROTOCOL OMEGA // ACTIVE</text>
+
+</svg>

@@ -1,90 +1,85 @@
 <div align="center">
-  <img src="assets/banner.png" alt="Veer Pratap Singh Banner" width="100%" />
+  <img src="assets/hud.svg" width="100%" alt="SYSTEM BOOT" />
 </div>
 
 <br />
 
-<div align="center">
-  <h1> VEER PRATAP SINGH </h1>
-  <p><b> SYSTEMS ENGINEER & DESIGNER </b></p>
-  <p> <i> "Built different. Calm about it." </i> </p>
-</div>
+```bash
+root@vps-core:~# cat /etc/motd
 
-<br />
-
-<div align="center">
-  <a href="https://veerpratapsingh.vercel.app"><img src="https://img.shields.io/badge/PORTFOLIO-000000?style=for-the-badge&logo=vercel&logoColor=white" /></a>
-  &nbsp;
-  <a href="mailto:veerpratap3007@gmail.com"><img src="https://img.shields.io/badge/EMAIL-000000?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-</div>
-
-<br />
-
----
-
-### `> whoami`
-
-```ts
-/** 
- *  @role    Systems Engineer, Full Stack Developer, Hardware Enthusiast
- *  @focus   Web Architecture • Embedded Systems • UI/UX • AI
- *  @status  Currently building a combat robot & an ESP-based drone
- */
-
-const veer = {
-  stack: ["TypeScript", "Python", "C++", "Next.js", "Framer Motion", "Embedded C"],
-  interests: ["Robotics", "Fast Cars", "Boxing", "Guitar", "Minimal Aesthetics"],
-  objective: "Build real-world systems at the intersection of software, hardware, and design."
-};
+ ██╗   ██╗███████╗███████╗██████╗ 
+ ██║   ██║██╔════╝██╔════╝██╔══██╗
+ ██║   ██║█████╗  █████╗  ██████╔╝
+ ╚██╗ ██╔╝██╔══╝  ██╔══╝  ██╔══██╗
+  ╚████╔╝ ███████╗███████╗██║  ██║
+   ╚═══╝  ╚══════╝╚══════╝╚═╝  ╚═╝
 ```
 
----
+> **DESIGNATION**: Veer Pratap Singh
+> **CLASS**: Systems Engineer // Hardware & UI/UX
+> **STATUS**: Building combat robots and highly-performant web architecture.
+> **DIRECTIVE**: "Built different. Calm about it."
 
 <br />
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="50%">
-        <b> ⚡ RECENT ACTIVITY </b><br/><br/>
-        <img src="https://github-readme-activity-graph.vercel.app/graph?username=Veerpratapsingh08&bg_color=09090b&color=a1a1aa&line=ffffff&point=ffffff&area=true&area_color=18181b&hide_border=true&radius=4" width="100%" />
-      </td>
-      <td align="center" width="50%">
-        <b> 🛠 CORE ARSENAL </b><br/><br/>
-        <img src="https://skillicons.dev/icons?i=ts,js,python,cpp,c&theme=dark" /><br/><br/>
-        <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,framer,nodejs&theme=dark" /><br/><br/>
-        <img src="https://skillicons.dev/icons?i=docker,git,linux,vercel,arduino&theme=dark" />
-      </td>
-    </tr>
-  </table>
-</div>
+### `[WEAPONS_CACHE]`
 
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="50%">
-        <b> 📊 GITHUB STATS </b><br/><br/>
-        <img src="https://github-readme-stats.vercel.app/api?username=Veerpratapsingh08&show_icons=true&hide_border=true&bg_color=09090b&title_color=ffffff&text_color=a1a1aa&icon_color=ffffff" />
-      </td>
-      <td align="center" width="50%">
-        <b> 🔥 COMMIT STREAK </b><br/><br/>
-        <img src="https://streak-stats.demolab.com?user=Veerpratapsingh08&theme=dark&hide_border=true&background=09090B&ring=ffffff&fire=ffffff&currStreakLabel=a1a1aa&sideLabels=a1a1aa&dates=52525b&stroke=27272a&border_radius=4" />
-      </td>
-    </tr>
-  </table>
-</div>
+```text
+[LANGUAGES]    :: TypeScript, Python, C++, Java, JavaScript, C
+[FRAMEWORKS]   :: Next.js, React, TailwindCSS, Framer Motion, Node.js
+[HARDWARE]     :: ESP32, Raspberry Pi, Arduino, Embedded C, Motor Controllers
+[DATA_OPS]     :: TensorFlow, Pandas, NumPy, OpenCV
+```
 
 <br />
 
----
+### `[CURRENT_OPERATIONS]`
+
+```text
+ID  | TARGET CLASSIFICATION | MISSION STATUS
+----|-----------------------|---------------
+001 | Combat Robot Chassis  | [IN PROGRESS] - Actuators offline, testing weapons.
+002 | ESP-Based Drone       | [IN PROGRESS] - PID Controller tuning.
+003 | Full Stack Portfolio  | [DEPLOYED]    - Traffic stabilized.
+004 | AI Vision System      | [PLANNING]    - Awaiting datasets.
+```
+
+<br />
+
+### `[SYSTEM_METRICS]`
 
 <div align="center">
-  <b> 🐍 CONTRIBUTION SNAKE </b><br/><br/>
-  <img src="https://raw.githubusercontent.com/Veerpratapsingh08/Veerpratapsingh08/output/github-contribution-grid-snake-dark.svg" width="100%" />
+  <a href="https://github.com/Veerpratapsingh08">
+    <img src="https://streak-stats.demolab.com?user=Veerpratapsingh08&theme=transparent&hide_border=true&background=000000&ring=ff003c&fire=ff003c&currStreakLabel=ffffff&sideLabels=ffffff&dates=888888&stroke=333333&border_radius=0" alt="Streak" />
+  </a>
 </div>
 
 <br />
 
 <div align="center">
-  <p><sub> <i> precision • power • aesthetics </i> </sub></p>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Veerpratapsingh08&bg_color=000000&color=ff003c&line=ffffff&point=ffffff&area=true&area_color=111111&hide_border=true&radius=0" alt="Activity Graph" />
 </div>
+
+<br />
+
+### `[CONTRIBUTION_SWARM]`
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Veerpratapsingh08/Veerpratapsingh08/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Snake" />
+</div>
+
+<br />
+
+### `[COMMS_LINK]`
+
+```bash
+root@vps-core:~# ping targets
+
+PORTFOLIO => veerpratapsingh.vercel.app [ONLINE]
+EMAIL     => veerpratap3007@gmail.com   [ENCRYPTED]
+```
+
+```bash
+root@vps-core:~# exit
+[CONNECTION TERMINATED]
+```
