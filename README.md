@@ -6,7 +6,7 @@
 
 <div align="center">
   <h1> VEER PRATAP SINGH </h1>
-  <p><b> SYSTEMS ENGINEER & DESIGNER </b></p>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=500&lines=%3E+SYSTEMS+ENGINEER;%3E+COMBAT+ROBOTICS+DEVELOPER;%3E+FULL-STACK+CREATOR" alt="Typing SVG" />
   <p> <i> "Built different. Calm about it." </i> </p>
   <br />
   <img src="https://komarev.com/ghpvc/?username=Veerpratapsingh08&label=SYSTEM%20CALLS&color=09090b&style=for-the-badge" alt="Profile Views" />
@@ -26,7 +26,9 @@
 
 <br />
 
----
+<div align="center"><code>//=========================[ SYSTEM_BUS_01 ]=========================//</code></div>
+
+<br />
 
 ### `[ ACTIVE_DIRECTIVES ]`
 
@@ -79,7 +81,22 @@ ID  | CLASSIFICATION         | STATUS        | PRIMARY TECHNOLOGIES
 
 <br />
 
----
+<div align="center"><code>//=========================[ SYSTEM_BUS_02 ]=========================//</code></div>
+
+<br />
+
+### `[ BACKGROUND_PROCESSES ]`
+
+```text
+[ALLOCATING_MEMORY] :: Machine Learning, ROS2, Advanced PCB Design
+[DAEMON_STATUS]     :: Optimizing algorithms & refining hardware architectures
+```
+
+<br />
+
+<div align="center"><code>//=========================[ SYSTEM_BUS_03 ]=========================//</code></div>
+
+<br />
 
 ### `[ FEATURED_MODULES ]`
 
@@ -106,7 +123,9 @@ ID  | CLASSIFICATION         | STATUS        | PRIMARY TECHNOLOGIES
 
 <br />
 
----
+<div align="center"><code>//=========================[ SYSTEM_BUS_04 ]=========================//</code></div>
+
+<br />
 
 ### `[ TELEMETRY_METRICS ]`
 
@@ -137,7 +156,9 @@ ID  | CLASSIFICATION         | STATUS        | PRIMARY TECHNOLOGIES
 
 <br />
 
----
+<div align="center"><code>//=========================[ SYSTEM_BUS_05 ]=========================//</code></div>
+
+<br />
 
 ### `[ CONTRIBUTION_GRID ]`
 
