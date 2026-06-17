@@ -160,10 +160,22 @@ ID  | CLASSIFICATION         | STATUS        | PRIMARY TECHNOLOGIES
 
 <br />
 
-### `[ CONTRIBUTION_GRID ]`
+### `[ LIVE_TELEMETRY ]`
+
+<!--START_SECTION:activity-->
+_Loading latest data streams..._
+<!--END_SECTION:activity-->
+
+<br />
+
+<div align="center"><code>//=========================[ SYSTEM_BUS_06 ]=========================//</code></div>
+
+<br />
+
+### `[ 3D_CONTRIBUTION_GRID ]`
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Veerpratapsingh08/Veerpratapsingh08/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution Snake" />
+  <img src="https://raw.githubusercontent.com/Veerpratapsingh08/Veerpratapsingh08/output-3d/profile-night-view.svg" width="100%" alt="3D Contribution Grid" />
 </div>
 
 <br />
