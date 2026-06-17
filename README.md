@@ -144,7 +144,7 @@ ID  | CLASSIFICATION         | STATUS        | PRIMARY TECHNOLOGIES
     <tr>
       <td align="center" width="50%">
         <b> 📊 SYSTEM STATS </b><br/><br/>
-        <img src="https://github-readme-stats.vercel.app/api?username=Veerpratapsingh08&theme=dark&hide_border=true&bg_color=09090b&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa&show_icons=true" width="100%" />
+        <img src="https://github-readme-stats.vercel.app/api?username=Veerpratapsingh08&theme=dark&hide_border=true&bg_color=09090b&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa&show_icons=true&count_private=true&include_all_commits=true" width="100%" />
       </td>
       <td align="center" width="50%">
         <b> 🌐 LANGUAGE DISTRIBUTION </b><br/><br/>
