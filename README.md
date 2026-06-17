@@ -8,6 +8,8 @@
   <h1> VEER PRATAP SINGH </h1>
   <p><b> SYSTEMS ENGINEER & DESIGNER </b></p>
   <p> <i> "Built different. Calm about it." </i> </p>
+  <br />
+  <img src="https://komarev.com/ghpvc/?username=Veerpratapsingh08&label=SYSTEM%20CALLS&color=09090b&style=for-the-badge" alt="Profile Views" />
 </div>
 
 <br />
@@ -16,6 +18,10 @@
   <a href="https://veerpratapsingh.vercel.app"><img src="https://img.shields.io/badge/PORTFOLIO-000000?style=for-the-badge&logo=vercel&logoColor=white" /></a>
   &nbsp;
   <a href="mailto:veerpratap3007@gmail.com"><img src="https://img.shields.io/badge/EMAIL-000000?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  &nbsp;
+  <a href="https://linkedin.com/in/veerpratapsingh"><img src="https://img.shields.io/badge/LINKEDIN-000000?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  &nbsp;
+  <a href="https://x.com/veerpratapsingh"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" /></a>
 </div>
 
 <br />
@@ -68,6 +74,7 @@ ID  | CLASSIFICATION         | STATUS        | PRIMARY TECHNOLOGIES
 [FRAMEWORKS]   :: Next.js, React, TailwindCSS, Framer Motion, Node.js
 [HARDWARE]     :: ESP32, Raspberry Pi, Arduino, Embedded C, Motor Controllers
 [DATA_OPS]     :: TensorFlow, Pandas, NumPy, OpenCV
+[SYS_TOOLS]    :: Git, Docker, Linux, Figma, CAD
 ```
 
 <br />
@@ -113,6 +120,16 @@ ID  | CLASSIFICATION         | STATUS        | PRIMARY TECHNOLOGIES
       <td align="center" width="50%">
         <b> 🔥 COMMIT CONSISTENCY </b><br/><br/>
         <img src="https://streak-stats.demolab.com?user=Veerpratapsingh08&theme=dark&hide_border=true&background=09090B&ring=38bdf8&fire=38bdf8&currStreakLabel=a1a1aa&sideLabels=a1a1aa&dates=52525b&stroke=27272a&border_radius=4" width="100%" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center" width="50%">
+        <b> 📊 SYSTEM STATS </b><br/><br/>
+        <img src="https://github-readme-stats.vercel.app/api?username=Veerpratapsingh08&theme=dark&hide_border=true&bg_color=09090b&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa&show_icons=true" width="100%" />
+      </td>
+      <td align="center" width="50%">
+        <b> 🌐 LANGUAGE DISTRIBUTION </b><br/><br/>
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Veerpratapsingh08&layout=compact&theme=dark&hide_border=true&bg_color=09090b&title_color=38bdf8&text_color=a1a1aa" width="100%" />
       </td>
     </tr>
   </table>
