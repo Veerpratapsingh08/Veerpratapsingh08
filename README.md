@@ -19,9 +19,9 @@
   &nbsp;
   <a href="mailto:veerpratap3007@gmail.com"><img src="https://img.shields.io/badge/EMAIL-000000?style=for-the-badge&logo=gmail&logoColor=white" /></a>
   &nbsp;
-  <a href="https://linkedin.com/in/veerpratapsingh"><img src="https://img.shields.io/badge/LINKEDIN-000000?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/veer-pratap-singh-a966bb295"><img src="https://img.shields.io/badge/LINKEDIN-000000?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
   &nbsp;
-  <a href="https://x.com/veerpratapsingh"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" /></a>
+  <a href="https://x.com/SinghVeer69950"><img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" /></a>
 </div>
 
 <br />
