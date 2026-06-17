@@ -6,7 +6,7 @@
 
 <div align="center">
   <h1> VEER PRATAP SINGH </h1>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=500&lines=%3E+SYSTEMS+ENGINEER;%3E+COMBAT+ROBOTICS+DEVELOPER;%3E+FULL-STACK+CREATOR" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=500&lines=%3E+SYSTEMS+ENGINEER;%3E+MACHINE+LEARNING+ENGINEER;%3E+COMBAT+ROBOTICS;%3E+FULL-STACK+CREATOR" alt="Typing SVG" />
   <p> <i> "Built different. Calm about it." </i> </p>
   <br />
   <img src="https://komarev.com/ghpvc/?username=Veerpratapsingh08&label=SYSTEM%20CALLS&color=09090b&style=for-the-badge" alt="Profile Views" />
@@ -75,7 +75,7 @@ ID  | CLASSIFICATION         | STATUS        | PRIMARY TECHNOLOGIES
 [LANGUAGES]    :: TypeScript, Python, C++, Java, JavaScript, C
 [FRAMEWORKS]   :: Next.js, React, TailwindCSS, Framer Motion, Node.js
 [HARDWARE]     :: ESP32, Raspberry Pi, Arduino, Embedded C, Motor Controllers
-[DATA_OPS]     :: TensorFlow, Pandas, NumPy, OpenCV
+[ML_AND_AI]    :: PyTorch, TensorFlow, Pandas, NumPy, OpenCV, Scikit-Learn
 [SYS_TOOLS]    :: Git, Docker, Linux, Figma, CAD
 ```
 
