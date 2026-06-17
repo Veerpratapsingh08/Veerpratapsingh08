@@ -180,6 +180,18 @@ _Loading latest data streams..._
 
 <br />
 
+<div align="center"><code>//=========================[ SYSTEM_BUS_07 ]=========================//</code></div>
+
+<br />
+
+### `[ CONTRIBUTION_SNAKE ]`
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Veerpratapsingh08/Veerpratapsingh08/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution Snake" />
+</div>
+
+<br />
+
 <div align="center">
   <p><sub> <i> precision • architecture • execution </i> </sub></p>
 </div>
