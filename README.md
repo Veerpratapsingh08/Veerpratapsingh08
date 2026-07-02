@@ -163,7 +163,7 @@ ID  | CLASSIFICATION         | STATUS        | PRIMARY TECHNOLOGIES
 ### `[ LIVE_TELEMETRY ]`
 
 <!--START_SECTION:activity-->
-1. 🎉 Merged PR [#1](https://github.com/Khancode07/football-ai/pull/1) in [Khancode07/football-ai](https://github.com/Khancode07/football-ai)
+1. 🚀 Published release [First release](https://github.com/Veerpratapsingh08/AlgoViz/releases/tag/V1.0) in [Veerpratapsingh08/AlgoViz](https://github.com/Veerpratapsingh08/AlgoViz)
 <!--END_SECTION:activity-->
 
 <br />
