@@ -163,7 +163,7 @@ ID  | CLASSIFICATION         | STATUS        | PRIMARY TECHNOLOGIES
 ### `[ LIVE_TELEMETRY ]`
 
 <!--START_SECTION:activity-->
-1. 🚀 Published release [First release](https://github.com/Veerpratapsingh08/AlgoViz/releases/tag/V1.0) in [Veerpratapsingh08/AlgoViz](https://github.com/Veerpratapsingh08/AlgoViz)
+1. 🚀 Published release [First Release](https://github.com/Veerpratapsingh08/GitStructura/releases/tag/v1.0) in [Veerpratapsingh08/GitStructura](https://github.com/Veerpratapsingh08/GitStructura)
 <!--END_SECTION:activity-->
 
 <br />
